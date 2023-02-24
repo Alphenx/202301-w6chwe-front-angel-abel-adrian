@@ -1,7 +1,7 @@
 import React from 'react';
-
+import './CreateRobot.css';
 const CreateRobot = () => {
-  return <div>CreateRobot</div>;
+  return <section className="create-robot">CreateRobot</section>;
 };
 
 export default CreateRobot;

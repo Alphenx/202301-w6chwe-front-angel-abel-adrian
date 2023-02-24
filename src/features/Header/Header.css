@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+}
+
+.header img {
+  width: 80%;
+}
