@@ -1,12 +1,10 @@
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import { router } from './router/app-router';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hola mundo</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
