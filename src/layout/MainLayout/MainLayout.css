@@ -1,0 +1,7 @@
+.app-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5%;
+  /* GUIDE BORDER */
+  border: solid black 1px;
+}
