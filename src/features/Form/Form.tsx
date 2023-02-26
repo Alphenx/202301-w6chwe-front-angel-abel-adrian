@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+
 import './Form.css';
+import { sendRobot } from './robotsFormSlice';
+import { useAppDispatch } from '../../app/hooks';
+
 const Form = () => {
   const [speedValue, setSpeedValue] = useState('5');
   const [resistValue, setResistValue] = useState('5');
   const [, setFactionValue] = useState('autobot');
-
+  const dispatch = useAppDispatch();
   function getCurrentDate() {
     let newDate = new Date();
     return newDate;
@@ -17,7 +21,6 @@ const Form = () => {
       className="form"
       onSubmit={(e) => {
         e.preventDefault();
-
         const newRobot = {
           name: e.currentTarget.labelName.value,
           imageUrl: e.currentTarget.labelImgUrl.value,
@@ -26,8 +29,7 @@ const Form = () => {
           creationDate: getCurrentDate(),
           faction: e.currentTarget.labelFaction.value,
         };
-
-        return newRobot;
+        dispatch(sendRobot(newRobot));
       }}
     >
       <h2>Create your Transformer</h2>
@@ -54,7 +56,6 @@ const Form = () => {
           <input
             name="labelSpeed"
             type="range"
-            id=""
             value={speedValue}
             min="0"
             max="10"
@@ -71,7 +72,6 @@ const Form = () => {
           <input
             name="labelResistance"
             type="range"
-            id=""
             value={resistValue}
             min="0"
             max="10"
