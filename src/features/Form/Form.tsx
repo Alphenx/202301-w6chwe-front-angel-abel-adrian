@@ -3,7 +3,7 @@ import './Form.css';
 const Form = () => {
   const [speedValue, setSpeedValue] = useState('5');
   const [resistValue, setResistValue] = useState('5');
-  const [factionValue, setFactionValue] = useState('autobot');
+  const [, setFactionValue] = useState('autobot');
 
   function getCurrentDate() {
     let newDate = new Date();
@@ -26,6 +26,7 @@ const Form = () => {
           creationDate: getCurrentDate(),
           faction: e.currentTarget.labelFaction.value,
         };
+
         return newRobot;
       }}
     >
