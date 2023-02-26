@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import robotsReducer from '../features/Form/robotsSlice';
+import robotsReducer from '../features/Form/robotsFormSlice';
 
 export const store = configureStore({
   reducer: {

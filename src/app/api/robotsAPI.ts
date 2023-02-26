@@ -15,7 +15,7 @@ export const getRobots = async () => {
   return allRobots;
 };
 
-const sendRobots = async (robot: RobotModel) => {
+export const sendRobots = async (robot: RobotModel) => {
   const response = await fetch(
     'https://huck8-202301-w6chwe-abel-adri-angel.onrender.com/api/v1/robots/',
     {
@@ -30,5 +30,3 @@ const sendRobots = async (robot: RobotModel) => {
   const currentRobot = await response.json();
   return currentRobot;
 };
-
-export default sendRobots;
