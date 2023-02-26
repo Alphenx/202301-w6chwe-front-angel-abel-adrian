@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  font-family: Helvetica, sans-serif, Arial;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  border: #005cc8 solid 2px;
+}
+
+.form input[type="submit"] {
+  background-color: #005cc8;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.form input[type="submit"]:hover {
+  color: #005cc8;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.form__speed,
+.form__resistance {
+  display: flex;
+  gap: 0rem;
+  width: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.form__speed p,
+.form__resistance p {
+  width: 10%;
+  text-align: right;
+}
+
+.form__speed span,
+.form__resistance span {
+  display: flex;
+  gap: 0.7rem;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.form__faction {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.form__faction input {
+  display: none;
+}
+.form__faction-decepticon input:checked + img {
+  filter: drop-shadow(0px 0px 3px rgba(98, 0, 255, 0.8));
+}
+
+.form__faction-autobot input:checked + img {
+  filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
+}
