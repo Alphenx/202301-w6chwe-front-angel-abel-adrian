@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Form.css';
 import { sendRobot } from './robotsFormSlice';
 import { useAppDispatch } from '../../app/hooks';
+import { getRobot } from '../CardList/CardList.Slice';
 
 const Form = () => {
   const [speedValue, setSpeedValue] = useState('5');
@@ -30,6 +31,7 @@ const Form = () => {
           faction: e.currentTarget.labelFaction.value,
         };
         dispatch(sendRobot(newRobot));
+        dispatch(getRobot());
       }}
     >
       <h2>Create your Transformer</h2>

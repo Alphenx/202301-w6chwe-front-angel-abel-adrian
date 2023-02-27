@@ -1,4 +1,4 @@
-import { RobotModel } from '../models/robot.model';
+import RobotModel from '../models/robot.model';
 
 export const getRobots = async () => {
   const response = await fetch(
