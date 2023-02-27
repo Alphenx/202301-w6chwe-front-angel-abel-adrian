@@ -17,7 +17,7 @@ const initialState: RobotState = {
 // Función asíncrona que llamaremos en los componentes posteriormente.
 export const getRobot = createAsyncThunk('transformers/getRobot', async () => {
   const response = await getRobots();
-  console.log(response);
+
   return response;
 });
 
