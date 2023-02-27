@@ -1,4 +1,4 @@
-export interface RobotModel {
+interface RobotModel {
   name: string;
   imageUrl: string;
   velocity: number;
@@ -6,3 +6,5 @@ export interface RobotModel {
   creationDate: Date;
   faction: string;
 }
+
+export default RobotModel;
