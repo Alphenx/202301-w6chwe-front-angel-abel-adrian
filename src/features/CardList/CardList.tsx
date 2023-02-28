@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import Card from '../Card/Card';
 import { getRobot, selectRobot } from './CardList.Slice';
-
+import './CardList.css';
 const RobotCardList = () => {
   const robotList = useAppSelector(selectRobot);
   const dispatch = useAppDispatch();
@@ -11,16 +11,19 @@ const RobotCardList = () => {
     dispatch(getRobot());
   }, [dispatch]);
   return (
-    <ul>
-      {robotList.map((robot, i) => (
-        <Card key={robot.name + i} robotCard={robot} />
-      ))}
-      <input
-        type="button"
-        value="robooots"
-        onClick={() => dispatch(getRobot())}
-      />
-    </ul>
+    <>
+      <ul className="cards-container">
+        {robotList.map((robot, i) => (
+          <Card key={robot.id} robotCard={robot} />
+        ))}{' '}
+        <input
+          className="robot-btn"
+          type="button"
+          value="Give me transformers"
+          onClick={() => dispatch(getRobot())}
+        />
+      </ul>
+    </>
   );
 };
 

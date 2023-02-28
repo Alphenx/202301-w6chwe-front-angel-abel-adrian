@@ -1,0 +1,12 @@
+.cards-container {
+  margin: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.robot-btn {
+  width: 800px;
+  font-size: 3rem;
+}
