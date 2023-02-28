@@ -1,4 +1,5 @@
 interface RobotModel {
+  id?: string;
   name: string;
   imageUrl: string;
   velocity: number;
