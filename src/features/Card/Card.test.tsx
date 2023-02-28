@@ -17,8 +17,8 @@ describe('Given a robotCar should be render', () => {
         <Card robotCard={robots[0]} />
       </Provider>
     );
-    const image = screen.getByRole('img');
-    expect(image).toBeInTheDocument();
+    const images = screen.getAllByRole('img');
+    expect(images.length).toEqual(2);
   });
 });
 
