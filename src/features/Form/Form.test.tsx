@@ -40,18 +40,17 @@ describe('Given a Form component', () => {
     });
   });
 
-  test('When the component is rendered, it should show a radio input that user can use for select faction', async () => {
+  test('When the user press submit, should show a robot name', async () => {
     render(
       <Provider store={store}>
         <Form />
       </Provider>
     );
-    const radioFn = jest.fn();
-    const radioElements = screen.getAllByRole('radio');
-    userEvent.click(radioElements[1], radioFn());
+    const submit = screen.getByTestId('submit-button');
+    userEvent.click(submit);
+    const paragraphName = screen.getAllByRole('paragraph');
     await waitFor(() => {
-      expect(radioFn).toHaveBeenCalled();
+      expect(paragraphName).toHaveTextContent('Pepe');
     });
-    expect(radioElements.length).toEqual(2);
   });
 });

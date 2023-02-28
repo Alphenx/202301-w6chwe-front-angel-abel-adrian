@@ -31,6 +31,7 @@ const Card: FC<RobotCard> = ({ robotCard }) => {
         </p>
       </div>
     </li>
+
   );
 };
 
