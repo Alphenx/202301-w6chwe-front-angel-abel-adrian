@@ -1,5 +1,3 @@
-import React from 'react';
-
 import RobotCardList from '../../features/CardList/CardList';
 import Form from '../../features/Form/Form';
 import './Home.css';
