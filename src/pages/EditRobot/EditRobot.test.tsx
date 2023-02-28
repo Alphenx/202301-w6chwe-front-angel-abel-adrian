@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import CreateRobot from './CreateRobot';
+import EditRobot from './EditRobot';
 
 test('render page', () => {
-  render(<CreateRobot />, { wrapper: MemoryRouter });
+  render(<EditRobot />, { wrapper: MemoryRouter });
   expect(true).toBe(true);
 });

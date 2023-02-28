@@ -17,8 +17,6 @@ const Form = () => {
 
   return (
     <form
-      method="post"
-      action="/create"
       className="form"
       onSubmit={(e) => {
         e.preventDefault();

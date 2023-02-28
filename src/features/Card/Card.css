@@ -1,1 +1,59 @@
+.card {
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+}
 
+.card--autobot {
+  background-color: rgba(239, 9, 9, 0.2);
+}
+.card--decepticon {
+  background-color: rgba(212, 0, 255, 0.2);
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 300px;
+}
+
+.card__info {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.card__info img {
+  display: block;
+  width: 5rem;
+  margin: 1rem auto;
+}
+
+.card__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card__btn {
+  margin: 0.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+
+.btn__edit {
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+}
+
+.btn__cross {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  border: none;
+}
