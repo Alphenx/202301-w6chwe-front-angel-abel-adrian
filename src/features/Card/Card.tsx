@@ -11,7 +11,7 @@ const Card: FC<RobotCard> = ({ robotCard }) => {
       <button>boton-1</button>
       <button>boton-2</button>
       <img src={robotCard.imageUrl} width={100} alt={robotCard.name} />
-      <p>Name:{robotCard.name}</p>
+      <p role="paragraph">Name:{robotCard.name}</p>
       <p>Speed:{robotCard.velocity}</p>
       <p>Resistance: {robotCard.resistance}</p>
       <p>Faction: {robotCard.faction}</p>

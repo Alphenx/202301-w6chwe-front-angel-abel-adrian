@@ -38,7 +38,7 @@ const Form = () => {
 
       <label className="form__name">
         Name:
-        <input type="text" name="labelName" required />
+        <input type="text" name="labelName" value="Pepe" required />
       </label>
 
       <label className="form__img-url">
@@ -108,7 +108,7 @@ const Form = () => {
           <img src="./assets/decepticon.svg" alt="decepticon" width={50} />
         </label>
       </div>
-      <input type="submit" value="CREATE" />
+      <input data-testid="submit-button" type="submit" value="CREATE" />
     </form>
   );
 };
